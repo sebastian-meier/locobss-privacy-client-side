@@ -1,15 +1,18 @@
-<script>
-  import Menu from '../components/menu.svelte';
+<script lang="ts">
+  import { locale, locales } from 'svelte-i18n';
 
-  const menu = [
-    { url: '/home',   label: 'Home',   protected: false },
-    { url: '/about',  label: 'About',  protected: false }
-  ];
+  const switchLang = (lang: string) => {
+    $locale = lang;
+  };
 
+  $: l_locale = $locale;
 </script>
 
 <header>
-  <nav>
-    <Menu menu={menu} />
-  </nav>
+  <span id="logo">LoCobSS</span>
+  <ul id="menu-lang">
+  {#each $locales as locale}
+    <li on:click={() => {switchLang(locale)}} class:selected={l_locale===locale}>{locale}</li>
+  {/each}
+  </ul>
 </header>

@@ -16,4 +16,6 @@
 	@import 'styles/global';
   @import 'styles/header';
   @import 'styles/footer';
+  @import 'styles/modals';
+  @import 'styles/map';
 </style>
