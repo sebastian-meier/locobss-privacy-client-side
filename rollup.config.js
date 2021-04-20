@@ -97,7 +97,8 @@ export default {
       __global: JSON.stringify({
         env: {
           isProd: production,
-          ...config().parsed // attached the .env config
+          ...config().parsed, // attached the .env config
+					...process.env,
         }
       }),
     }),
