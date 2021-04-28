@@ -1,3 +1,5 @@
+This repo is part of the LoCobSS research project. More details about the project and dependencies to other repos can be found [here](https://github.com/sebastian-meier/LoCobSS-documentation).
+
 # locobss-privacy-client-side
 An explorable explanation for showing how to collection survey statistics without violating individuals' privacy.
 
